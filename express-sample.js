@@ -6,6 +6,12 @@ const app = express();
 const path = require('path');
 const port = 3000;
 
+// Middleware
+app.use(function (req, res, next) {
+  console.log('Middleware 1 executed');
+  next();
+});
+
 // Example 1: Hello World
 // app.get('/', (req, res) => res.send('Hello World!'));
 
